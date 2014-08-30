@@ -1,0 +1,19 @@
+body {
+    padding: 50px;
+}
+
+.slideshow {
+    width: 50px;
+    height: 50px;
+    
+    -webkit-transition: 0.1s ease-out;
+    -moz-transition: 0.1s ease-out;
+    -o-transition: 0.1s ease-out;
+}
+
+.slideshow:hover {
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+}

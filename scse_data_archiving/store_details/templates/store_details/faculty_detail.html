@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+    <title>Faculty Detail</title>
+      <link rel="stylesheet" type="text/css" href="http://mark-rolich.github.io/Magnifier.js/magnifier.css">  
+    
+
+
+</head>
+
+<body>
+<span>
+    <ul style="list-style-type: none; display: inline-block;">
+<div style="width: 410px; margin:  10px 50px 30px 5px">
+    <li><a class="magnifier-thumb-wrapper" href="{{ object.image.url }}">
+        <img id="thumb" src={{ object.image.url }} width='142' height='142'
+        data-large-img-url={{ object.image.url }}
+        data-large-img-wrapper="preview">
+    </a>
+</ul>
+    <div class="magnifier-preview" id="preview" style="width: 200px; height: 150px; margin: 10px 500px 30px 5px;"></div>
+</div>
+     
+<ul style="list-style-type: none; display: inline-block;">
+    <li><b>NAME:</b>{{ object.name }}<br>
+    <li><b>AGE:</b>{{ object.age }}<br>
+    <li><b>DOB:</b>{{ object.date_of_birth }}<br>
+    <li><b>Current Subjects:  </b>{{ object.current_subjects }}<br>
+    <li><b>Research Interest: </b>{{ object.research_interest }}<br>
+    <li><b>Joining Year: </b>{{ object.joining_year }}<br>
+    <li><b>Projects: </b>{{ object.projects }}<br>
+    <li><b>E-mail</b>:    {{ object.email }}<br>
+    <li><b>Address</b>:    {{ object.address }}<br>
+    <li><b>Mobile Number</b>:   {{ object.mobile_number }}<br>
+</ul>
+
+</span>
+
+<script type="text/javascript" src="http://mark-rolich.github.io/Magnifier.js/Event.js"></script>
+<script type="text/javascript" src="http://mark-rolich.github.io/Magnifier.js/Magnifier.js"></script>
+<script type="text/javascript">
+var evt = new Event(),
+    m = new Magnifier(evt);
+m.attach({
+    thumb: '#thumb',
+    large: '{{ object.image.url }}',
+    largeWrapper: 'preview',
+    zoom: 1.5,
+});
+</script>
+</body>
+</html>     

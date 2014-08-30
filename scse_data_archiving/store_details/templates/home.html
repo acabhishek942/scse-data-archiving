@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<title>HOME</title>
+<input id="facultytextbox" type="text" />
+<button id="FacultyButton" class="float-right submit-button" >Faculty Details</button><br><br><br><br>
+<input id="studenttextbox" type="text" />
+<button id="StudentButton" class="float-right submit-button" >Student Details</button><br><br><br>
+<input id="otherstafftextbox" type="text" />
+
+
+<button id="OtherStaffButton" class="float-right submit-button" >Staff Details</button><br><br><br>
+
+
+<script type="text/javascript">
+    
+    document.getElementById("FacultyButton").onclick = function () {
+       var textboxValue = document.getElementById("facultytextbox").value;
+         location.href = "http://127.0.0.1:8000/faculty-details/" + textboxValue;
+    };
+    document.getElementById("StudentButton").onclick=function(){
+        var student_textbox_value=document.getElementById("studenttextbox").value;
+        location.href="http://127.0.0.1:8000/student-details/" + student_textbox_value;
+    };
+    document.getElementById("OtherStaffButton").onclick=function(){
+        var otherstaff_textbox_value=document.getElementById("otherstafftextbox").value;
+        location.href="http://127.0.0.1:8000/otherstaff-details/" + otherstaff_textbox_value;
+    };
+</script>
