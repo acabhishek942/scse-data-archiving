@@ -31,8 +31,8 @@ class Faculty(TimeStampedModel):
     email = models.EmailField(
         max_length=254, null=True, unique=True, validators=[validate_email, ])
     address = models.TextField(max_length=200)
-    mobile_number = models.IntegerField()
-    land_line = models.IntegerField()
+    mobile_number = models.CharField(max_length=13)
+    land_line = models.CharField(max_length=20, blank=True)
 
 
 class Student(TimeStampedModel):
@@ -49,8 +49,8 @@ class Student(TimeStampedModel):
     email = models.EmailField(
         max_length=254, null=True, unique=True, validators=[validate_email, ])
     address = models.TextField(max_length=200)
-    mobile_number = models.IntegerField()
-    land_line = models.IntegerField()
+    mobile_number = models.CharField(max_length=13)
+    land_line = models.CharField(max_length=20, blank=True)
 
 
 class OtherStaff(TimeStampedModel):
@@ -65,5 +65,5 @@ class OtherStaff(TimeStampedModel):
     email = models.EmailField(
         max_length=254, null=True, unique=True, validators=[validate_email, ])
     address = models.TextField(max_length=200)
-    mobile_number = models.IntegerField()
-    land_line = models.IntegerField()
+    mobile_number = models.CharField(max_length=13)
+    land_line = models.CharField(max_length=20, blank=True)

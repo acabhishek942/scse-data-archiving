@@ -14,14 +14,14 @@
     
     document.getElementById("FacultyButton").onclick = function () {
        var textboxValue = document.getElementById("facultytextbox").value;
-         location.href = "http://127.0.0.1:8000/faculty-details/" + textboxValue;
+         location.href = "/faculty-details/" + textboxValue;
     };
     document.getElementById("StudentButton").onclick=function(){
         var student_textbox_value=document.getElementById("studenttextbox").value;
-        location.href="http://127.0.0.1:8000/student-details/" + student_textbox_value;
+        location.href="/student-details/" + student_textbox_value;
     };
     document.getElementById("OtherStaffButton").onclick=function(){
         var otherstaff_textbox_value=document.getElementById("otherstafftextbox").value;
-        location.href="http://127.0.0.1:8000/otherstaff-details/" + otherstaff_textbox_value;
+        location.href="/otherstaff-details/" + otherstaff_textbox_value;
     };
 </script>
