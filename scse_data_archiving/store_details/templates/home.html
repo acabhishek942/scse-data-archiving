@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<title>HOME</title>
+{% extends 'base.html' %}
+{% block page_title %}Details{% endblock page_title %}
+{% block content %}
 <input id="facultytextbox" type="text" />
 <button id="FacultyButton" class="float-right submit-button" >Faculty Details</button><br><br><br><br>
 <input id="studenttextbox" type="text" />
@@ -8,6 +9,7 @@
 
 
 <button id="OtherStaffButton" class="float-right submit-button" >Staff Details</button><br><br><br>
+<a href="{% url 'new_student' %}">New Student Registration</a>
 
 
 <script type="text/javascript">
@@ -25,3 +27,4 @@
         location.href="/otherstaff-details/" + otherstaff_textbox_value;
     };
 </script>
+{% endblock content %}

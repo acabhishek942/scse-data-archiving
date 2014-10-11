@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'model_utils',
     'braces',
     "reversion",
+    'compressor',
     "django_forms_bootstrap",
     'stdimage',
     'store_details',
@@ -76,7 +77,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'HST'
 
 USE_I18N = True
 

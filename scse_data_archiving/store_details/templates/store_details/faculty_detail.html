@@ -1,15 +1,8 @@
-{% load staticfiles %}
-<!doctype html>
-<html>
-<head>
-    <title>Faculty Detail</title>
-      <link rel="stylesheet" type="text/css" href="http://mark-rolich.github.io/Magnifier.js/magnifier.css">  
-    
+{% extends 'base.html' %}
+{% block page_title %}Details{% endblock page_title %}
+{% block content %}
 
 
-</head>
-
-<body>
 <span>
     
 <div style="width: 50px;">
@@ -67,5 +60,5 @@ m.attach({
     zoom: 1.5,
 });
 </script>
-</body>
-</html>     
+
+{% endblock content %}

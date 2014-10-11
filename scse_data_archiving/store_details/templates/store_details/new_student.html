@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block page_title %}Details{% endblock page_title %}
+{% block content %}
+<body>
+    {% load bootstrap_tags %}
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|as_bootstrap }}
+        <input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: blue; background-color: light blue; border: 3pt ridge lightgrey" value="Submit">
+    </form>
+</body>
+</html>
+{% endblock content %}

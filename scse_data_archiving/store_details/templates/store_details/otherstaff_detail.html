@@ -1,8 +1,7 @@
-<html>
-<head>
-    <title>Other Staff Detail</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block page_title %}Details{% endblock page_title %}
+{% block content %}
+
     <p><b>NAME:</b>{{ object.name }}<p>
     <p><b>AGE:</b>{{ object.age }}<p>
     <p><b>DOB:</b>{{ object.date_of_birth }}<p>
@@ -10,5 +9,5 @@
     
     <p><b>Joining Year: </b>{{ object.joining_year }}<p>
     
-</body>
-</html>
+
+{% endblock content %}
